@@ -1,0 +1,1161 @@
+{
+	"info": {
+		"_postman_id": "91e04d86-c807-4f72-9126-856c581a278e",
+		"name": "rSeries Quick Start",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "System1",
+			"item": [
+				{
+					"name": "GET Auth Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var headerValue = pm.response.headers.get(\"X-Auth-Token\");",
+									"pm.environment.set(\"X-Auth-Token_Chassis1_System_Controller\", headerValue);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "rctoken",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/openconfig-system:system/aaa",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"aaa"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET DNS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "godqhrgkwk@2022",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "rctoken",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/openconfig-system:system/dns",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"dns"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET NTP",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/openconfig-system:system/ntp",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"ntp"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Clock",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/openconfig-system:system/clock",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"clock"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET VLAN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/openconfig-vlan:vlans",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-vlan:vlans"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/f5-tenants:tenants",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create VLAN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-vlan:vlans\": {\r\n        \"vlan\": [\r\n            {\r\n                \"vlan-id\": \"444\",\r\n                \"config\": {\r\n                    \"vlan-id\": 444,\r\n                    \"name\": \"Internal-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"555\",\r\n                \"config\": {\r\n                    \"vlan-id\": 555,\r\n                    \"name\": \"External-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"500\",\r\n                \"config\": {\r\n                    \"vlan-id\": 500,\r\n                    \"name\": \"HA-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"501\",\r\n                \"config\": {\r\n                    \"vlan-id\": 501,\r\n                    \"name\": \"HA-VLAN-Tenant1\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"502\",\r\n                \"config\": {\r\n                    \"vlan-id\": 502,\r\n                    \"name\": \"HA-VLAN-Tenant2\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"503\",\r\n                \"config\": {\r\n                    \"vlan-id\": 503,\r\n                    \"name\": \"HA-VLAN-Tenant3\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenant\": [\r\n        {\r\n            \"name\": \"demo0-r10k1\",\r\n            \"config\": {\r\n                \"image\": \"BIGIP-15.1.5-0.0.10.ALL-F5OS.qcow2.zip.bundle\",\r\n                \"nodes\": [\r\n                    1\r\n                ],\r\n                \"mgmt-ip\": \"10.10.10.156\",\r\n                \"gateway\": \"10.10.10.1\",\r\n                \"prefix-length\": 24,\r\n                \"vlans\": [\r\n                    1,\r\n                    100,\r\n                    110,\r\n                    120\r\n                ],\r\n                \"vcpu-cores-per-node\": 4,\r\n                \"memory\": 14848,\r\n                \"cryptos\": \"enabled\",\r\n                \"running-state\": \"configured\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/f5-tenants:tenants",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create NTP",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-system:system\": {\r\n        \"ntp\": {\r\n            \"config\": {\r\n                \"enabled\": \"true\"\r\n            },\r\n            \"servers\": {\r\n                \"server\": [\r\n                    {\r\n                        \"address\": \"time.google.com\",\r\n                        \"config\": {\r\n                            \"address\": \"time.google.com\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create DNS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-system:system\": {\r\n        \"clock\": {\r\n            \"config\": {\r\n                \"timezone-name\": \"Asia/Singapore\"\r\n            }\r\n        },\r\n        \"dns\": {\r\n            \"config\": {\r\n                \"search\": \"apcj.f5sa.com\"\r\n            },\r\n            \"servers\": {\r\n                \"server\": [\r\n                    {\r\n                        \"address\": \"8.8.8.8\",\r\n                        \"config\": {\r\n                            \"address\": \"8.8.8.8\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"address\": \"10.10.10.10\",\r\n                        \"config\": {\r\n                            \"address\": \"10.10.10.10\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"address\": \"10.10.10.11\",\r\n                        \"config\": {\r\n                            \"address\": \"10.10.10.11\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{System1_ip}}:8888/restconf/data/f5-tenants:tenants/tenant={{tenant}}",
+							"protocol": "https",
+							"host": [
+								"{{System1_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants",
+								"tenant={{tenant}}"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "System2",
+			"item": [
+				{
+					"name": "GET Auth Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var headerValue = pm.response.headers.get(\"X-Auth-Token\");",
+									"pm.environment.set(\"X-Auth-Token_Chassis1_System_Controller\", headerValue);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "rctoken",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/openconfig-system:system/aaa",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"aaa"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET DNS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "godqhrgkwk@2022",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "rctoken",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/openconfig-system:system/dns",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"dns"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET NTP",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/openconfig-system:system/ntp",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"ntp"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Clock",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/openconfig-system:system/clock",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-system:system",
+								"clock"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET VLAN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/openconfig-vlan:vlans",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-vlan:vlans"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/f5-tenants:tenants",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create VLAN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-vlan:vlans\": {\r\n        \"vlan\": [\r\n            {\r\n                \"vlan-id\": \"444\",\r\n                \"config\": {\r\n                    \"vlan-id\": 444,\r\n                    \"name\": \"Internal-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"555\",\r\n                \"config\": {\r\n                    \"vlan-id\": 555,\r\n                    \"name\": \"External-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"500\",\r\n                \"config\": {\r\n                    \"vlan-id\": 500,\r\n                    \"name\": \"HA-VLAN\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"501\",\r\n                \"config\": {\r\n                    \"vlan-id\": 501,\r\n                    \"name\": \"HA-VLAN-Tenant1\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"502\",\r\n                \"config\": {\r\n                    \"vlan-id\": 502,\r\n                    \"name\": \"HA-VLAN-Tenant2\"\r\n                }\r\n            },\r\n            {\r\n                \"vlan-id\": \"503\",\r\n                \"config\": {\r\n                    \"vlan-id\": 503,\r\n                    \"name\": \"HA-VLAN-Tenant3\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenant\": [\r\n        {\r\n            \"name\": \"demo0-r10k1\",\r\n            \"config\": {\r\n                \"image\": \"BIGIP-15.1.5-0.0.10.ALL-F5OS.qcow2.zip.bundle\",\r\n                \"nodes\": [\r\n                    1\r\n                ],\r\n                \"mgmt-ip\": \"10.10.10.156\",\r\n                \"gateway\": \"10.10.10.1\",\r\n                \"prefix-length\": 24,\r\n                \"vlans\": [\r\n                    1,\r\n                    100,\r\n                    110,\r\n                    120\r\n                ],\r\n                \"vcpu-cores-per-node\": 4,\r\n                \"memory\": 14848,\r\n                \"cryptos\": \"enabled\",\r\n                \"running-state\": \"configured\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/f5-tenants:tenants",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create NTP",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-system:system\": {\r\n        \"ntp\": {\r\n            \"config\": {\r\n                \"enabled\": \"true\"\r\n            },\r\n            \"servers\": {\r\n                \"server\": [\r\n                    {\r\n                        \"address\": \"time.google.com\",\r\n                        \"config\": {\r\n                            \"address\": \"time.google.com\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create DNS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openconfig-system:system\": {\r\n        \"clock\": {\r\n            \"config\": {\r\n                \"timezone-name\": \"Asia/Singapore\"\r\n            }\r\n        },\r\n        \"dns\": {\r\n            \"config\": {\r\n                \"search\": \"apcj.f5sa.com\"\r\n            },\r\n            \"servers\": {\r\n                \"server\": [\r\n                    {\r\n                        \"address\": \"8.8.8.8\",\r\n                        \"config\": {\r\n                            \"address\": \"8.8.8.8\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"address\": \"10.10.10.10\",\r\n                        \"config\": {\r\n                            \"address\": \"10.10.10.10\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"address\": \"10.10.10.11\",\r\n                        \"config\": {\r\n                            \"address\": \"10.10.10.11\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								""
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete TENANT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssw0rd!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo-user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "default"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{Auth-Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{System2_ip}}:8888/restconf/data/f5-tenants:tenants/tenant={{tenant}}",
+							"protocol": "https",
+							"host": [
+								"{{System2_ip}}"
+							],
+							"port": "8888",
+							"path": [
+								"restconf",
+								"data",
+								"f5-tenants:tenants",
+								"tenant={{tenant}}"
+							]
+						},
+						"description": "F5 rSeriea API"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

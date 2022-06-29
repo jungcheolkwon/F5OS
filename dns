@@ -1,0 +1,36 @@
+{
+    "openconfig-system:system": {
+        "clock": {
+            "config": {
+                "timezone-name": "Asia/Singapore"
+            }
+        },
+        "dns": {
+            "config": {
+                "search": "example.com"
+            },
+            "servers": {
+                "server": [
+                    {
+                        "address": "8.8.8.8",
+                        "config": {
+                            "address": "8.8.8.8"
+                        }
+                    },
+                    {
+                        "address": "10.10.10.10",
+                        "config": {
+                            "address": "10.10.10.10"
+                        }
+                    },
+                    {
+                        "address": "10.10.10.11",
+                        "config": {
+                            "address": "10.10.10.11"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

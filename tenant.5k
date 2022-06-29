@@ -1,0 +1,27 @@
+{
+    "tenant": [
+        {
+            "name": "demo0-r5k2",
+            "config": {
+                "image": "BIGIP-bigip15.1.x-europa-15.1.5-0.0.248.ALL-F5OS.qcow2.zip.bundle",
+                "nodes": [
+                    1
+                ],
+                "mgmt-ip": "10.10.10.184",
+                "gateway": "10.10.10.1",
+                "prefix-length": 24,
+                "vlans": [
+                    1,
+                    100,
+                    110,
+                    120,
+                    130
+                ],
+                "vcpu-cores-per-node": 4,
+                "memory": 14848,
+                "cryptos": "enabled",
+                "running-state": "configured"
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "openconfig-vlan:vlans": {
+        "vlan": [
+            {
+                "vlan-id": "1",
+                "config": {
+                    "vlan-id": 1,
+                    "name": "vlan1"
+                }
+            },
+            {
+                "vlan-id": "100",
+                "config": {
+                    "vlan-id": 100,
+                    "name": "vlan100"
+                }
+            },
+            {
+                "vlan-id": "110",
+                "config": {
+                    "vlan-id": 110,
+                    "name": "vlan110"
+                }
+            },
+            {
+                "vlan-id": "120",
+                "config": {
+                    "vlan-id": 120,
+                    "name": "vlan120"
+                }
+            },
+            {
+                "vlan-id": "130",
+                "config": {
+                    "vlan-id": 130,
+                    "name": "vlan130"
+                }
+            }
+        ]
+    }
+}

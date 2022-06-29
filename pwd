@@ -1,0 +1,11 @@
+{
+    "input": [
+        {
+            "old-password": "P@ssw0rd!",
+            "new-password": "new-password!",
+            "confirm-password": "new-password"
+        }
+    ]
+}
+
+
